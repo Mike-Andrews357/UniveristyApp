@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>UnivApp</title>
-    <%= csrf_meta_tags %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tech University</title>
+    <%= csrf_meta_tags %>  
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -10,6 +13,16 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <main>
+      <div class='container'>
+        <%= yield %>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <%= render 'layouts/footer' %>
+    </footer>
+  </body> 
 </html>
